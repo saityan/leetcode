@@ -17,7 +17,6 @@ private class ReducingDishes {
             currentSum += dishes[index]
             sum += currentSum
             index--
-            println(currentSum.toString() + "\t" + sum.toString())
         }
         return sum
     }
