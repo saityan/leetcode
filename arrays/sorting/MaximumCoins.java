@@ -4,23 +4,39 @@ package leetcode.arrays.sorting;
  * leetcode.com/problems/maximum-number-of-coins-you-can-get/submissions/
  */
 
-import java.util.Arrays;
-
 class MaximumCoins {
     public int maxCoins(int[] piles) {
         //Check validity
-        if (piles.length % 3 !=0)
+        if (piles.length % 3 != 0)
             return -1;
 
         int result = 0;
 
-        //Copy the data (we shouldn't change the original data)
-        int[] sortedPiles = Arrays.copyOf(piles, piles.length);
-        Arrays.sort(sortedPiles);
+        //Create frequency array using constraints
+        int[] pilesFrequency = new int[10001];
+        for (int pile : piles)
+            pilesFrequency[pile]++;
 
-        //Iterate through the new array
-        for (int i = sortedPiles.length - 1; i >= sortedPiles.length / 3; i -= 2)
-            result += sortedPiles[i - 1];
+        //Flag is true if Alice made her choice this turn
+        boolean flag = false;
+        int turnsLeft = (piles.length / 3) * 2;
+        int index = pilesFrequency.length - 1;
+
+        //Iterate through the frequency array
+        while (turnsLeft > 0) {
+            if (pilesFrequency[index] == 0) {
+                index--;
+                continue;
+            }
+            pilesFrequency[index]--;
+            turnsLeft--;
+            if (!flag)
+                flag = true;
+            else {
+                result += index;
+                flag = false;
+            }
+        }
 
         return result;
     }
