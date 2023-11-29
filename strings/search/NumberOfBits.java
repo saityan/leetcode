@@ -4,7 +4,7 @@ package leetcode.strings.search;
  * leetcode.com/problems/number-of-1-bits/
  */
 
-public class NumberOfBits {
+class NumberOfBits {
     public int hammingWeight(int n) {
         int result = 0;
         while (n != 0) {
