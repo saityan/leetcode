@@ -36,8 +36,3 @@ private class TreeToString {
         return result.toString()
     }
 }
-
-private class TreeNode(var `val`: Int) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
-}
