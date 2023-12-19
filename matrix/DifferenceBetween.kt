@@ -1,4 +1,4 @@
-package leetcode.arrays.matrix
+package leetcode.matrix
 
 /**
  * https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column/

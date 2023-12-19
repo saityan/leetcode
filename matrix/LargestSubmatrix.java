@@ -1,4 +1,4 @@
-package leetcode.arrays.matrix;
+package leetcode.matrix;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -18,7 +18,7 @@ class LargestSubmatrix {
 
         int result = 0;
 
-        //Create and populate frequency map
+        // Create and populate frequency map
         int[][] frequencyMap = new int[height][width];
         for (int i = 0; i < height; i++) {
             if (i > 0 && i == (height - 1)) {
@@ -45,10 +45,10 @@ class LargestSubmatrix {
                 }
         }
 
-        //Iterate through the map
+        // Iterate through the map
         for (int i = 0; i < height; i++) {
 
-            //Sort current row
+            // Sort current row
             int[] localRow = Arrays.stream(frequencyMap[i]).boxed()
                     .sorted(Collections.reverseOrder())
                     .mapToInt(Integer::intValue)

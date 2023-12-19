@@ -1,4 +1,4 @@
-package leetcode.arrays.matrix
+package leetcode.matrix
 
 /**
  * https://leetcode.com/problems/transpose-matrix/

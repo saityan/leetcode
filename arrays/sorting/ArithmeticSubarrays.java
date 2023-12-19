@@ -13,15 +13,15 @@ import java.util.stream.IntStream;
 class ArithmeticSubarrays {
     public List<Boolean> checkArithmeticSubarrays(int[] nums, int[] l, int[] r) {
 
-        //Check validity
-        if (nums.length <1 || l.length < 1 || l.length != r.length)
+        // Check validity
+        if (nums.length < 1 || l.length < 1 || l.length != r.length)
             return Collections.singletonList(false);
 
         boolean[] result = new boolean[l.length];
 
         for (int i = 0; i < l.length; i++) {
 
-            //Introduce query
+            // Introduce query
             int first = l[i];
             int last = r[i];
             if (last <= first)
@@ -29,7 +29,7 @@ class ArithmeticSubarrays {
             if (first + 2 > last)
                 result[i] = true;
 
-            //Store result of query in array
+            // Store result of query in array
             int[] localNums = new int[last - first + 1];
 
             for (int j = first; j <= last; j++)
