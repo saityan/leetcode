@@ -1,4 +1,4 @@
-package leetcode.DP;
+package leetcode.dp;
 
 /**
  * leetcode.com/problems/knight-dialer/
