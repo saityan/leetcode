@@ -4,7 +4,6 @@ package leetcode.dp
  * https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/description/
  */
 
-
 private class DiceRollsWithTarget {
     val modulo = 1000000007L
 
