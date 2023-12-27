@@ -15,7 +15,6 @@ private class ColorfulRope {
         var i = 0
 
         while (i < colors.lastIndex) {
-
             if (colors[i] != colors[i + 1]) {
                 i++
                 continue
