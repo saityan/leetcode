@@ -4,7 +4,7 @@ package leetcode.arrays.search
  * https://leetcode.com/problems/maximum-product-of-three-numbers/
  */
 
-class MaximumProductOfThree {
+private class MaximumProductOfThree {
     fun maximumProduct(nums: IntArray): Int {
         if (nums.size < 3) return 0
 
