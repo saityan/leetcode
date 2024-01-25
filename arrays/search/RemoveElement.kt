@@ -1,5 +1,9 @@
 package leetcode.arrays.search
 
+/**
+ * https://leetcode.com/problems/remove-element
+ */
+
 private class RemoveElement {
     fun removeElement(nums: IntArray, `val`: Int): Int {
         if (nums.isEmpty()) return 0
