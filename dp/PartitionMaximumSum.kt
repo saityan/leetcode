@@ -1,12 +1,10 @@
 package leetcode.dp
 
-import kotlin.math.max
-
 /**
  * https://leetcode.com/problems/partition-array-for-maximum-sum
  */
 
-class PartitionMaximumSum {
+private class PartitionMaximumSum {
     fun maxSumAfterPartitioning(arr: IntArray, k: Int): Int {
         if (arr.isEmpty() || k < 1) return 0
 
