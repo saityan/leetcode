@@ -1,4 +1,4 @@
-package leetcode.calc
+package leetcode.dp
 
 /**
  * https://leetcode.com/problems/perfect-squares/
