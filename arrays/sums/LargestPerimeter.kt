@@ -4,7 +4,7 @@ package leetcode.arrays.sums
  * https://leetcode.com/problems/find-polygon-with-the-largest-perimeter/
  */
 
-class LargestPerimeter {
+private class LargestPerimeter {
     fun largestPerimeter(nums: IntArray): Long {
         if (nums.size < 3) return -1L
 
