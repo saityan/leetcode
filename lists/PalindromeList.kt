@@ -1,7 +1,5 @@
 package leetcode.lists
 
-import java.util.Stack
-
 /**
  * https://leetcode.com/problems/palindrome-linked-list/
  */
