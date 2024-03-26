@@ -1,4 +1,4 @@
-package leetcode.strings.transformation
+package leetcode.strings.transposal
 
 /**
  * https://leetcode.com/problems/reverse-words-in-a-string
