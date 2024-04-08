@@ -1,4 +1,4 @@
-package leetcode.arrays.calc
+package leetcode.arrays.calculation
 
 /**
  * https://leetcode.com/problems/product-of-array-except-self/
