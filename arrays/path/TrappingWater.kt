@@ -28,9 +28,9 @@ private class TrappingWater {
         }
 
         for (i in height.indices) {
-            val minMax = min(leftMax[i], rightMax[i])
-            if (minMax > height[i]) {
-                result += minMax - height[i]
+            val localMin = min(leftMax[i], rightMax[i])
+            if (localMin > height[i]) {
+                result += localMin - height[i]
             }
         }
 
