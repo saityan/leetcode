@@ -1,4 +1,4 @@
-package leetcode.grids.path;
+package leetcode.grids;
 
 /**
  * leetcode.com/problems/minimum-time-visiting-all-points/
