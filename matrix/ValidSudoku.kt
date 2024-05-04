@@ -8,9 +8,9 @@ private class ValidSudoku {
     fun isValidSudoku(board: Array<CharArray>): Boolean {
         if (board.size != 9 || board[0].size != 9) return false
 
-        val rows = HashMap<Int, MutableList<Char>>()
-        val cols = HashMap<Int, MutableList<Char>>()
-        val quads = HashMap<Int, MutableList<Char>>()
+        val rows = HashMap<Int, MutableSet<Char>>()
+        val cols = HashMap<Int, MutableSet<Char>>()
+        val quads = HashMap<Int, MutableSet<Char>>()
 
         for (i in 0..8) {
             for (j in 0..8) {
@@ -18,31 +18,25 @@ private class ValidSudoku {
                 if (letter == '.') {
                     continue
                 }
-                rows.getOrPut(i) { mutableListOf() }
+                rows.getOrPut(i) { mutableSetOf() }
                 rows[i]?.let {
-                    if (it.contains(letter)) {
+                    if (!it.add(letter)) {
                         return false
-                    } else {
-                        it.add(letter)
                     }
                 }
 
-                cols.getOrPut(j) { mutableListOf() }
+                cols.getOrPut(j) { mutableSetOf() }
                 cols[j]?.let {
-                    if (it.contains(letter)) {
+                    if (!it.add(letter)) {
                         return false
-                    } else {
-                        it.add(letter)
                     }
                 }
 
                 val quadIndex = (i / 3) * 3 + (j / 3)
-                quads.getOrPut(quadIndex) { mutableListOf() }
+                quads.getOrPut(quadIndex) { mutableSetOf() }
                 quads[quadIndex]?.let {
-                    if (it.contains(letter)) {
+                    if (!it.add(letter)) {
                         return false
-                    } else {
-                        it.add(letter)
                     }
                 }
             }
